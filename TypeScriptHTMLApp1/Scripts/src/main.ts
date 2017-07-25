@@ -18,7 +18,7 @@ require.config({
 });
 
 require(["app/app", "jquery", "knockout"], (gt, $, ko) => {
-    // code from window.onload
+    // code from window.onload 
     $(document).ready(() => {        
         var greeter = new gt.Greeter('Peter', 'Vogel');
         greeter.start();

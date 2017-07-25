@@ -1,12 +1,14 @@
-///<reference path="../typings/jquery/jquery.d.ts" />
+///<reference path="../typings/requirejs/require.d.ts" />
 ///<reference path="../typings/knockout/knockout.d.ts" />
-var TSTEST;
-(function (TSTEST) {
+define(["require", "exports"], function (require, exports) {
+    "use strict";
+    //export module TSTEST {
     var Greeter = (function () {
-        function Greeter(ko, fNmae, lName) {
+        function Greeter(fNmae, lName) {
+            this.ko = require('knockout');
             this.firstName = fNmae;
             this.lastName = lName;
-            this.timeValue = ko.observable(new Date().toUTCString());
+            this.timeValue = this.ko.observable(new Date().toUTCString());
         }
         Greeter.prototype.start = function () {
             var _this = this;
@@ -19,6 +21,7 @@ var TSTEST;
         };
         return Greeter;
     }());
-    TSTEST.Greeter = Greeter;
-})(TSTEST || (TSTEST = {}));
+    exports.Greeter = Greeter;
+});
+//}
 //# sourceMappingURL=app.js.map

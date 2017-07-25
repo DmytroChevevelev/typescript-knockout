@@ -6,7 +6,9 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es5",
-    "outDir": "scripts/app"
+    "outDir": "scripts/app",
+    "module": "amd",
+    "moduleResolution": "Classic"
   },
   "include": [
     "scripts/src/**/*"

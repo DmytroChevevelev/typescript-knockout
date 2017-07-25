@@ -1,7 +1,7 @@
-﻿///<reference path="../typings/jquery/jquery.d.ts" />
+﻿///<reference path="../typings/requirejs/require.d.ts" />
 ///<reference path="../typings/knockout/knockout.d.ts" />
 
-module TSTEST {
+//export module TSTEST {
     export class Greeter {
         element: HTMLElement;
         span: HTMLElement;
@@ -9,12 +9,13 @@ module TSTEST {
         public firstName: string;
         public lastName: string;
         public timeValue: KnockoutObservable<string>;
+        ko: any;
 
-        constructor(ko: any, fNmae: string, lName: string) {           
-            
+        constructor(fNmae: string, lName: string) {
+            this.ko = require('knockout');
             this.firstName = fNmae;
             this.lastName = lName;
-            this.timeValue = ko.observable(new Date().toUTCString());
+            this.timeValue = this.ko.observable(new Date().toUTCString());
         }
 
         start() {
@@ -27,5 +28,5 @@ module TSTEST {
             clearTimeout(this.timerToken);
         }  
     }   
-}
+//}
 

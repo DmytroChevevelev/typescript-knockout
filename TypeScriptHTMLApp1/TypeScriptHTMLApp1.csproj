@@ -31,16 +31,17 @@
     <Content Include="Scripts\vendors\jquery\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\vendors\knockout\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\vendors\knockout\knockout-3.4.2.js" />
-    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\src\app.ts" />
+    <TypeScriptCompile Include="Scripts\src\main.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\tests\jasmine.extensions.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
